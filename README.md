@@ -1,7 +1,8 @@
 Para refletir a arquitetura do diagrama fornecido em uma proposta de esboço para o projeto Sails.js, adaptaremos a descrição inicial conforme segue:
 <div>
-  <img src=""> 
+  <img src="MVC.png">
 <div/>
+  
 ### 1. Definição do Escopo do Projeto Sails.js
 **Objetivo Principal:** Criar um dashboard intercultural online para a Universidade Zuyd, que facilite a comunicação e o aprendizado de estudantes internacionais em simulações de negócios.
 
