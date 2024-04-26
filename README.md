@@ -1,31 +1,31 @@
-Para criar uma proposta de arquitetura detalhada em esboço do padrão MVC para o projeto Sails.js, focaremos no desenvolvimento de um dashboard intercultural online para a Universidade Zuyd. Vamos esboçar o diagrama passo a passo:
+Para refletir a arquitetura do diagrama fornecido em uma proposta de esboço para o projeto Sails.js, adaptaremos a descrição inicial conforme segue:
 
 ### 1. Definição do Escopo do Projeto Sails.js
-**Objetivo Principal:** Desenvolver um dashboard online para apoiar o aprendizado intercultural de estudantes internacionais durante uma simulação de negócios.
+**Objetivo Principal:** Criar um dashboard intercultural online para a Universidade Zuyd, que facilite a comunicação e o aprendizado de estudantes internacionais em simulações de negócios.
 
 **Principais Funcionalidades:**
-- **Entrada de Dados:** Estudantes preenchendo questionários e revisões por pares.
-- **Visualizações:** Mostrar pontuações de estudantes, equipes e países em decisões, colaboração, manejo de conflitos e liderança.
-- **Ferramentas Adicionais:** Medidor de felicidade, download de materiais, upload de tarefas, acesso/tutoria, plataforma de comunicação, ferramenta de análise de resultados.
+- **Autenticação de Usuário:** Permitir o login seguro dos estudantes.
+- **Pesquisa e Análise:** Capacitar estudantes a pesquisar e analisar informações relevantes.
+- **Gerenciamento de Equipes:** Possibilitar a criação e atualização de informações das equipes e seus membros.
 
 ### 2. Desenvolvimento da Arquitetura MVC Detalhada
 **Modelos (Models):**
-- **User:** Atributos como ID, nome, país de origem, equipe.
-- **Survey:** Perguntas do questionário e respostas associadas.
-- **Team:** Informações sobre equipes, incluindo membros e pontuações agregadas.
-- **Score:** Dados de pontuações nas várias métricas avaliadas.
+- **User:** Armazena atributos como ID, nome, equipe, e país.
+- **Barra de Pesquisa:** Gerencia as funcionalidades de pesquisa, incluindo perguntas e respostas.
+- **Time (Equipe):** Detém informações sobre as equipes, seus membros e dados relevantes.
 
 **Controladores (Controllers):**
-- **UserController:** Gerencia operações de usuário, como criação, atualização e autenticação.
-- **SurveyController:** Controla a lógica para o preenchimento dos questionários e análises das respostas.
-- **TeamController:** Administra as informações das equipes e as interações entre membros.
-- **ScoreController:** Processa e fornece acesso às pontuações e métricas de desempenho.
+- **UserController:** Responsável por criar, atualizar e autenticar usuários.
+- **Barra de Pesquisa Controller:** Lida com as funcionalidades de preenchimento e análise das pesquisas.
+- **Time Controller:** Gerencia a criação e atualização de equipes e membros.
 
 **Visões (Views):**
-- **Dashboard View:** Interface principal onde os resultados são exibidos visualmente.
-- **Survey View:** Formulários para preenchimento dos questionários.
-- **Profile View:** Perfil do usuário com informações pessoais e histórico de atividades.
+- **Login:** Interface para autenticação dos usuários.
+- **Barra de Pesquisa:** Para realizar e exibir os resultados das pesquisas.
+- **Time:** Visualização e gerenciamento das equipes e membros.
 
 **Infraestrutura:**
-- **Banco de Dados:** Armazena todas as entidades e seus relacionamentos.
-- **APIs Externas:** Integração com sistemas de autenticação, análise de dados e outras funcionalidades.
+- **Banco de Dados:** Utiliza PostgreSQL para armazenar e gerenciar dados do usuário, pesquisa e equipes.
+- **Servidor:** A lógica de negócio é processada no servidor, onde reside a arquitetura MVC.
+
+As etapas acima ilustram o esboço da arquitetura do projeto Sails.js para o dashboard intercultural online da Universidade Zuyd, considerando o diagrama fornecido.
