@@ -1,8 +1,6 @@
-Para refletir a arquitetura do diagrama fornecido em uma proposta de esboço para o projeto Sails.js, adaptaremos a descrição inicial conforme segue:
 <div>
-  <img src=""> 
+  <img src="MVC.png">
 </div>
-
 **Principais Funcionalidades:**
 - **Autenticação de Usuário:** Permitir o login seguro dos estudantes.
 - **Pesquisa e Análise:** Capacitar estudantes a pesquisar e analisar informações relevantes.
