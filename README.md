@@ -1,6 +1,7 @@
 <div>
   <img src="MVC.png">
 </div>
+
 **Principais Funcionalidades:**
 - **Autenticação de Usuário:** Permitir o login seguro dos estudantes.
 - **Pesquisa e Análise:** Capacitar estudantes a pesquisar e analisar informações relevantes.
