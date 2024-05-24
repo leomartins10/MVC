@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    <h2>Tratar Texto</h2>
+    <form action="/tratarTexto" method="POST">
+        <label for="texto" name="texto">Insira seu texto</label> 
+        <input id="texto" name="texto">
+        <div>
+            <h2>Tipo do tratamento:</h2>
+            <select name="tipo" id="tipo">
+                <option value="caracterEspecial">caracterEspecial</option>
+                <option value="caracterMinusculo">caracterMinusculo</option>
+                <option value="caracterNumero">caracterNumero</option>
+            </select>
+        </div>
+        <button type="submit">Tratar texto</button>
+    </form>
+</body>
+</html>
