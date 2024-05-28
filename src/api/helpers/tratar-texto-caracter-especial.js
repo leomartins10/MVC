@@ -29,7 +29,7 @@ module.exports = {
   fn: async function (inputs, exits) {
     try {
       // Remover caracteres especiais
-      let textoTratado = inputs.texto.replace(/[^a-zA-Z0-9\s]/g, '');
+      let textoTratado = inputs.texto.replace(/[^a-zA-Z0-9]/g, '');
 
       // Transformar letras maiúsculas em minúsculas
       textoTratado = textoTratado.toLowerCase();

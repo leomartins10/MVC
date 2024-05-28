@@ -13,9 +13,35 @@ module.exports = {
     console.log( req.body );
 
     const texto =  req.body.texto;
-    console.log( 'texto:', req.body.texto );
+    const tipoDado = req.body.tipoDado;
     const tipo = req.body.tipo;
+
+    console.log( 'texto:', req.body.texto );
     console.log( 'tipo:', req.body.tipo );
+
+    if(req.body.tipoDado && tipoDado === 'number'){
+      console.log('condição');
+      try{
+        const dadoValidado = await sails.helpers.validarNumber.with({tipoDado});
+        console.log(' sails.helpers.validarNumber');
+        return res.json({'Dado validado com sucesso': dadoValidado});
+      }catch (error) {
+        console.log(error)
+        return res.view('pages/main', console.log('erro'));
+      }
+
+    }
+
+    if(req.body.tipoDado && tipoDado === 'string'){
+      try{
+        const dadoValidado = await sails.helpers.validarString.with({tipoDado});
+        console.log(' sails.helpers.validarString');
+        return res.json({'Dado validado com sucesso': dadoValidado});
+      }catch (error) {
+        return res.view('pages/main', console.log('erro'));
+      }
+
+    }
 
     if(tipo === 'caracterEspecial'){
       try {

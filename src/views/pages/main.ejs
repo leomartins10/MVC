@@ -13,12 +13,29 @@
         <div>
             <h2>Tipo do tratamento:</h2>
             <select name="tipo" id="tipo">
-                <option value="caracterEspecial">caracterEspecial</option>
-                <option value="caracterMinusculo">caracterMinusculo</option>
-                <option value="caracterNumero">caracterNumero</option>
+                <option value="caracterEspecial">Remover caractér especial e espaços em branco</option>
+                <option value="caracterMinusculo">Transformar caractér maiusculo em minusculo</option>
+                <option value="caracterNumero">Remover números</option>
             </select>
         </div>
         <button type="submit">Tratar texto</button>
     </form>
+
+    <form action="/tratarTexto" method="POST">
+        <h2>Validação de Tipo de dado:</h2>
+        <label for="texto" name="texto">Insira sua string</label> 
+        <input id="texto" name="texto">
+        <label for="texto" name="texto">Insira seu número</label> 
+        <input type="number" name="texto">
+        <div>
+            <h2>Tipo de dado esperado:</h2>
+            <select name="tipoDado">
+                <option value="string">string</option>
+                <option value="number">number</option>
+            </select>
+        </div>
+        <button type="submit">Tratar texto</button>
+    </form>
+
 </body>
 </html>
